@@ -1,0 +1,18 @@
+{
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  },
+  "overrides": [
+    {
+      "files": [ "src/**/main/**/*.ts", "src/**/test/**/*.ts" ],
+      "rules": {
+        "@tinymce/no-implicit-dom-globals": [
+          "error", {
+            "allowed": [ "btoa", "fetch", "requestAnimationFrame", "InputEvent" ],
+            "appendDefaults": true
+          }
+        ]
+      }
+    }
+  ]
+}
